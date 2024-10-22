@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "9089a3f8-21e2-4425-8eb4-94f09b8964d3",
+		"name": "Pregunta2-EF-DAW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34102124"
+	},
+	"item": [
+		{
+			"name": "Curso",
+			"item": [
+				{
+					"name": "registrarCurso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Matemáticas Avanzadas\",\r\n    \"vacantes\": 30,\r\n    \"cicloRequerido\": 2,\r\n    \"profesor\": {\r\n        \"id\": 1  \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/curso/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curso",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CursoPorNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/curso/getCurso/Matemáticas%20Avanzadas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"curso",
+								"getCurso",
+								"Matemáticas%20Avanzadas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profesor",
+			"item": [
+				{
+					"name": "ProfesorPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profesor/getProfesor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesor",
+								"getProfesor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrarProfesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"departamento\": \"Matemáticas\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/profesor/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesor",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estudiante",
+			"item": [
+				{
+					"name": "EstudiantePorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estudiante/getEstudiante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"getEstudiante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrarEstudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Patrick\",\r\n    \"apellido\": \"Montes\",\r\n    \"email\": \"patrick@example.com\",\r\n    \"ciclo\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/estudiante/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matricula",
+			"item": [
+				{
+					"name": "registrarMatricula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estudiante\": {\r\n        \"id\": 1  \r\n    },\r\n    \"curso\": {\r\n        \"id\": 1  \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matricula/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matricula",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
